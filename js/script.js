@@ -130,7 +130,7 @@ $(document).ready(function() {
 				if (input.val() == input.attr('placeholder')) {
 					input.val('');
 				}
-			})
+			});
 		});
 	}
 
@@ -237,7 +237,7 @@ equalheight = function(container) {
 	$(container).each(function() {
 
 		$el = $(this);
-		$($el).height('auto')
+		$($el).height('auto');
 		topPostion = $el.position().top;
 
 		if (currentRowStart != topPostion) {
@@ -257,19 +257,19 @@ equalheight = function(container) {
 			rowDivs[currentDiv].height(currentTallest);
 		}
 	});
-}
+};
 
 $(window).resize(function() {
 	equalheight('#soup ul li .thumbnail');
 });
 
-$(function() {
-	// there's the gallery and the trash
-	var $gallery = $(".combination ul"), 
-		$trash = $(".empty-box");
+//main drag'n'drop logic
+$(document).ready(function() {
+	// define ingredient and salad gallery and destination
+	var gallery = $('.kj'), destination = $(".empty-box");
 
 	// let the gallery items be draggable
-	$("li", $gallery).draggable({
+	$(".combination ul li").draggable({
 		cancel : "a.ui-icon", // clicking an icon won't initiate dragging
 		revert : "invalid", // when not dropped, the item will revert back to its initial position
 		containment : "document",
@@ -279,21 +279,21 @@ $(function() {
 	});
 
 	// let the ingredient items be draggable
-	$("li", $trash).draggable({
-		cancel : "a.ui-icon", // clicking an icon won't initiate dragging
-		revert : "invalid", // when not dropped, the item will revert back to its initial position
-		containment : "document",
-		cursor : "move",
-		refreshPositions : true,
-	});
+	// $("li", destination).draggable({
+	// cancel : "a.ui-icon", // clicking an icon won't initiate dragging
+	// revert : "invalid", // when not dropped, the item will revert back to its initial position
+	// containment : "document",
+	// cursor : "move",
+	// refreshPositions : true,
+	// });
 
 	// let the trash be droppable, accepting the gallery items
-	$trash.droppable({
+	destination.droppable({
 		accept : ".combination ul > li",
 		activeClass : "ui-state-highlight",
-		tolerance: "fit",
+		tolerance : "fit",
 		drop : function(event, ui) {
-			// $("ul.selected-salad").appendTo($trash);
+			// $("ul.selected-salad").appendTo(destination);
 			$(this).find('ul').append(ui.draggable.clone());
 			$("ul.selected-salad li:first-child").animate({
 				width : "300px"
@@ -310,15 +310,32 @@ $(function() {
 			var dataName = data.name;
 			var dataCalories = data.calories;
 			var dataProtein = data.protein;
-			//put all ingredients in an object
-			var data_ingred = {
-				Name : dataName,
-				Type : dataType,
-				Calories : dataCalories,
-				Proteins : dataProtein,
-				Price : dataPrice
-			}
 
+			if (dataType == 'ingredient ') {
+				//if we receive an ingredient, first we check if there is already a salad - if not, we return a warning to choose a salad first
+				//if we have a salad ->
+				// we create the ingredient object, take the session of the temp salad and add the ingredient
+				//we check if there are already 2 ingredients - if yes, we do not add another but warn to delete some ingredients to switch
+				
+				//put all ingredient info in an object
+				var data_ingred = {
+					Name : dataName,
+					Type : dataType,
+					Calories : dataCalories,
+					Proteins : dataProtein,
+					Price : dataPrice
+				};
+			} else if (dataType == 'salad'){
+				//if we receive a salad, we check if there is already a salad chosen. if yes, we delete the existing salad both in the dispay and in the temp salad
+				//but we retain the other already chosen ingredients. we build the salad object, add the existing ingredients (if any) and save to display and temp salad in session
+				
+			} else if (dataType == 'crutoane') {
+				//we get the temp salad from the session , check if crutons are not already addedd. if not, we add crutons
+				
+			} else if (dataType == 'dressing'){
+				//we check if there is already a dressing. if yes, we delete the existing dressing from the temp session and add the new one - update both display and temp salad in session
+				
+			}
 			//parse current salad from session
 			var salate = $.parseJSON(sessionStorage.getItem('salata_tmp'));
 			//if we already have a salad
@@ -326,6 +343,7 @@ $(function() {
 
 				if (salate.Ingrediente.length > 1) {
 					console.log('Max 2 ingredient');
+					return false;
 				} else {
 					salate.Total_Price = getCommaDelimitedStringFromStringValue(getFloatValueFromCommaDelimitedString(salate.Total_Price) + getFloatValueFromCommaDelimitedString(dataPrice));
 					salate.Ingrediente.push(data_ingred);
@@ -345,8 +363,8 @@ $(function() {
 					sessionStorage.setItem('salata_tmp', JSON.stringify(salate));
 				} else {
 					console.log('Choose a salad first!');
-					if ($trash.dataType !== "salata") {
-						$("li", $trash).remove();
+					if (destination.dataType !== "salata") {
+						$("li", destination).remove();
 					}
 
 					console.log(ui);
@@ -358,13 +376,13 @@ $(function() {
 
 	var getFloatValueFromCommaDelimitedString = function(stringValue) {
 		return parseFloat(stringValue.replace(/,/g, '.'));
-	}
+	};
 	var getCommaDelimitedStringFromStringValue = function(floatValue) {
 		return floatValue.toString().replace(/\./g, ',');
-	}
+	};
 	// let the gallery be droppable as well, accepting items from the trash
-	$gallery.droppable({
-		accept : $trash,
+	gallery.droppable({
+		accept : destination,
 		activeClass : "custom-state-active",
 		drop : function(event, ui) {
 
@@ -374,9 +392,9 @@ $(function() {
 	// image deletion function
 	// function deleteImage( $item ) {
 	// $item.fadeOut(function() {
-	// // var $list = $( "ul", $trash ).length ?
-	// // $( "ul", $trash ) :
-	// // $( "<ul class='gallery ui-helper-reset'/>" ).appendTo( $trash );
+	// // var $list = $( "ul", destination ).length ?
+	// // $( "ul", destination ) :
+	// // $( "<ul class='gallery ui-helper-reset'/>" ).appendTo( destination );
 	// var $list = $('ul.selected-salad');
 	// //$item.find( "a.ui-icon-trash" ).remove();
 	// $item.appendTo( $list ).fadeIn(function() {
