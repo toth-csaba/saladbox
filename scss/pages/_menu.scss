@@ -1,0 +1,600 @@
+/***** Start menu-wrapper *****/
+.menu-wrapper {
+  position: relative;
+  margin: 90px 0px 0px 0px;
+  
+  .nav-tabs {
+    border-bottom: 1px solid #747373;
+    
+    > li {
+      
+      &.active {
+        border-bottom: 1px solid #ebebeb;
+        margin-right: -1px;
+        
+        > a {
+          background-color: transparent;
+          border: 1px solid #747373;
+          border-bottom: 0px;
+          margin-right: -1px;
+          margin-left: -1px;
+          
+          
+          &:hover {
+            background-color: transparent;
+            color: #333333;
+          }
+        }
+      }
+      
+      > a {
+        color: #333333;
+        font-size: 20px;
+        
+        &:hover {
+          background-color: transparent;
+          border-bottom:0px;
+        }
+      }
+    }
+  }
+}
+
+.combination {
+  position: relative;
+}
+
+.salad-option {
+  
+  h2 {
+    font-size: 35px;
+    font-family: 'cookie', sans-serif;
+    text-align: center;
+  }
+}
+
+.our-salads {  
+  position: relative;
+  margin: 30px auto;
+  max-width: 250px;
+  width: 100%;
+  
+  .popover {
+    width: 300px;
+  }  
+   
+  ul {
+    
+    &.meats {
+      li {
+        margin: 5px;
+      }
+    }
+    
+    li {
+      width: 60px;     
+      float: left;
+      text-align: center;
+      position: relative;
+    }
+  }
+}
+
+
+
+.ingredients {
+  float: left;
+  max-width: 250px;
+  width: 100%;
+  margin-left: 10px;
+  
+  ul { 
+    li{
+      float: left;
+      width: 62px;
+      
+      img {
+        padding: 2px;
+      }
+    } 
+  }
+}
+
+.empty-box {
+  float: left;
+  max-width: 550px;
+  width: 100%;
+  margin: 150px 28px 0px 26px;
+  min-height: 500px;
+}
+
+  .empty-box {
+    li {
+      &:first-child {
+        float: left;
+      }
+    }
+  }
+  
+  .empty-box {
+    li {
+      width: 60px;
+      margin: 5px;
+      float: right;
+    }
+  }
+
+.nav-tabs {
+  .dropdown-menu {
+    min-width: 156px !important;
+    width: 156px;
+    margin-top: 0px !important;
+  }
+}
+
+/*-- Croutons --*/
+.croutons {
+  float: right;
+  margin-right: 50px;
+  
+  ul {
+    li {
+      max-width: 60px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+/*-- Dressing --*/
+.dressing {
+  float: right;
+  max-width: 125px;
+  width: 100%;
+  margin-right: 35px;
+  margin-top: 50px;
+  
+  ul { 
+    li{
+      float: left;
+      width: 62px;
+      
+      img {
+        padding: 2px;
+      }
+    } 
+  }
+}
+
+
+/*-- Start Soup menu --*/
+#soup {
+  
+  h2 {
+    padding: 20px 0px;
+    font-size: 45px;
+    font-family: 'cookie', sans-serif;
+    text-align: center;
+  }
+  
+  ul {
+    li {
+      float: left;
+      max-width: 300px;
+      width: 100%;
+      margin: 0px 20px;
+      
+      .thumbnail {
+        min-height: 370px;  
+        position: relative;
+        
+        h3 {
+          font-size: 30px;
+          font-family: 'cookie', sans-serif;
+          text-align: left;
+          padding: 0px 0px 0px 10px;
+        }  
+        
+        p {
+          font-size: 13px;
+          padding: 0px 10px;
+        }   
+        
+        .price {
+          width: 50%;
+          padding: 20px 10px;
+          float: left;
+          font-size: 13px;
+        }
+        
+        .weight {
+          width: 50%;
+          padding: 20px 10px;
+          float: right;
+          font-size: 13px;
+          text-align: right;
+        }
+        
+        a {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+        }
+      }
+    }
+  }
+}
+/*-- End Soup menu --*/
+
+/*-- Start Fresh menu --*/
+#fresh {
+  
+  h2 {
+    padding: 20px 0px;
+    font-size: 45px;
+    font-family: 'cookie', sans-serif;
+    text-align: center;
+  }
+  
+  ul {
+    li {
+      float: left;
+      max-width: 300px;
+      width: 100%;
+      margin: 0px 20px;
+      
+      .thumbnail {
+        position: relative;
+        min-height: 300px;
+        
+        h3 {
+          font-size: 30px;
+          font-family: 'cookie', sans-serif;
+          text-align: left;
+          padding: 0px 0px 0px 10px;
+        }    
+        
+        .price {
+          width: 50%;
+          padding: 20px 10px;
+          float: left;
+          font-size: 13px;
+        }
+        
+        .weight {
+          width: 50%;
+          padding: 20px 10px;
+          float: right;
+          font-size: 13px;
+          text-align: right;
+        }
+        
+        a {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+        }
+      }
+    }
+  }
+}
+/*-- End Fresh menu --*/
+
+/*-- Start settings --*/
+.setting-wrapper {
+  border-top: 1px solid #747373;
+  position: relative;
+  bottom: -200px;
+  width: 100%;
+}
+  
+.setting-container {
+  float: right;
+  
+  .dd-selected {
+    border: 1px solid #747373;
+    background: #fff;
+    @include border-radius(5px);
+    color: #AFAFAF;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  .dd-container {
+    max-width: 70% !important;
+    float: right;
+  }
+  
+  .dd-select {
+    border: none !important;
+  }
+  
+  .popover {
+    width: 150px;
+    
+    h3 {
+      text-align: center;
+    }
+  }
+  
+  .setting-content {
+    float: left;
+    margin-right: 20px;
+    
+    > a {
+      display: block;
+      width: 70px;
+      height: 70px;
+      border: 1px solid #747373;
+      border-top: none;
+      @include border-bottom-radius(35px);
+      @include sprites-sprite(settings, false, 10px, 9px);
+      
+      &.active {
+        background-color: #fff;
+        border-top: 1px solid #fff;
+        margin-top: -1px;
+      }
+    }
+  }
+    
+  .address-content { 
+    float: left;
+    margin-right: 20px;
+    
+    > a {
+      display: block;
+      width: 70px;
+      height: 70px;
+      border: 1px solid #747373;
+      border-top: none;
+      @include border-bottom-radius(35px);
+      @include sprites-sprite(adress, false, 11px, 11px);
+      
+      &.active {
+        background-color: #fff;
+        border-top: 1px solid #fff;
+        margin-top: -1px;
+      }
+    }
+  }
+  .shopping-content {   
+    float: left;
+    margin-right: 20px;
+    
+    > a {
+      display: block;
+      width: 70px;
+      height: 70px;
+      border: 1px solid #747373;
+      border-top: none;
+      @include border-bottom-radius(35px);
+      @include sprites-sprite(shopping, false, 12px, 12px);
+          
+      &.active {
+        background-color: #fff;
+        border-top: 1px solid #fff;
+        margin-top: -1px;
+      }
+    }
+  }
+}
+/*-- End settings --*/
+
+/*-- Start setting-form, my-address, shopping-menu --*/
+.setting-form, .address-accordion, .shopping-menu {
+  display: none;
+  position:absolute;
+  padding: 35px 0px;
+  bottom: 71px;
+  left: 0px;
+  right: 0px;
+  background-color: #fff;
+  border: 1px solid #747373;
+  border-bottom: 0px;
+  
+  .btn {
+    float: right;
+    margin: 20px 20px 0px 0px;
+  }
+  
+  fieldset {
+    margin: 10px 0px;
+    
+    > label {
+      max-width: 29%;
+      width: 100%;
+    }
+    
+    input[type="text"] {
+      max-width: 70%;
+      width: 100%;
+      height: 40px;
+      color: #747373;
+      font-size: 20px;
+      border: 1px solid #747373;
+      padding: 0px 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      line-height: 24px;
+      outline: none;
+      
+      &:focus {
+        outline: 0;
+        outline: thin dotted \9;
+        @include box-shadow(rgba(0, 0, 0, 0.075) 0 1px 1px, rgba(82, 168, 236, 0.6) 0 0 8px);
+        -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+        -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+        -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+        transition: border linear 0.2s, box-shadow linear 0.2s;
+      }
+    }
+  }
+}
+
+.setting-left {
+  width: 50%;
+  float: left;
+  padding: 20px;
+}
+
+.setting-right {
+  width: 50%;
+  float: left;
+  padding: 20px;
+}
+
+.city-set {
+  padding-top: 10px;
+}
+
+.check-set {
+  float: left;
+  width: 100%;
+  margin-left: 20px;
+  padding-top: 3px;
+}
+
+.my-address {
+  
+  li {
+    position: relative;
+    border: 1px solid #747373;
+    @include border-radius(3px);
+    margin: 10px 50px;
+    padding: 10px;
+    
+    .close-address {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      @include sprites-sprite(close-address, false, 0px, 0px);
+      cursor: pointer;
+      
+    }
+    
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.shopping-menu {
+  padding: 50px 0px;
+  ul {
+    li {
+      position: relative;
+      float: left;
+      max-width: 280px;
+      min-height: 350px;
+      width: 100%;
+      margin: 0px 30px;
+      
+      .delete-salad {
+        position: absolute;
+        right: -18px;
+        top: -14px; 
+        width: 20px;
+        height: 23px;
+        @include sprites-sprite(close-my-salad, false, 0px, 0px);
+        cursor: pointer;
+      }
+      
+      .buy-salad {
+        position: absolute;
+        right: 8px; 
+        top: -15px; 
+        width: 26px;
+        height: 26px;
+        @include sprites-sprite(salad-shopping-icon, false, 0px, 0px);
+        cursor: pointer;
+      }
+      
+      h4 {
+        padding: 5px 0px 5px 30px;
+        font-size: 28px;
+        font-family: 'cookie', sans-serif;
+      }
+      
+      p {
+        padding: 0px 20px;
+        font-size: 12px;
+      }
+      
+      span {
+        font-size: 14px;
+        margin: 20px 25px 20px 25px;
+        
+        &.salad-weight {
+          text-align: left;
+          float: left;
+        }
+        
+        &.salad-price {
+          text-align: right;
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+.address-accordion .btn {
+  margin: 20px 50px 0px 0px !important;
+}
+
+/*-- Start add-address modal --*/
+#add-address {
+  .setting-form {
+    display: block !important;
+    position: relative !important;
+    padding: 0px;
+    border: 0px;
+    bottom: 0px;
+  }
+  
+  .dd-selected {
+    border: 1px solid #747373;
+    background: #fff;
+    @include border-radius(5px);
+    color: #AFAFAF;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  .dd-container {
+    max-width: 70% !important;
+    float: right;
+  }
+  
+  .dd-select {
+    border: none !important;
+  }
+  
+  .check-set {
+    float: none;
+    margin: 30px 0px;
+  }
+}
+/*-- End add-address modal --*/
+
+/*-- End setting-form, my-address, shopping-menu --*/
+
+/*-- Start Drag and Drop styles --*/
+.selected-salad {
+  li {
+    img {
+      width: 100%;
+    }
+  }
+}
+/*-- End Drag and Drop styles --*/
+/***** End menu-wrapper *****/

@@ -1,0 +1,73 @@
+
+/******************** Start Media queries for tablet ********************/
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 992px) {
+  .login-form {
+    form {
+      float: none;
+      margin: 0 auto;
+    }
+  }
+  .info-content {
+    max-width: 470px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+/******************** End Media queries for tablet ********************/
+
+/******************** Start Media queries for mobile ********************/
+@media only screen 
+and (min-width : 0px) 
+and (max-width : 767px) {
+  .content-head {
+    height: 300px;
+    
+    h2 {
+      padding: 130px 0px 40px 0px !important;
+      font-size: 40px !important;
+    }
+  }
+  
+  .login-form {
+    margin: 0px auto !important;
+    
+    .password-recover {
+      margin: 20px 0%;
+    }
+    
+    form {
+      fieldset {
+        label { 
+          float: none;
+          width: 100%;
+        }
+        
+        input[type="text"], input[type="password"] {
+          width: 100%;
+        }
+        
+        input[type="submit"] {
+          margin-right: 0%;
+        }
+      }
+    }
+  }
+  
+  .login-with {
+    p {
+      float: none !important;
+      width: 100% !important;
+      margin: 20px 0px 10px;
+    }
+    
+    a {
+      &.gmail {
+        margin: 0px 5px !important;
+      }
+    }
+  }
+}
+/******************** End Media queries for mobile ********************/
