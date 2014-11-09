@@ -1,7 +1,3 @@
-$(window).load(function() {
-
-});
-
 $(document).ready(function() {
 
 	// This fade out the login form and fade in the register form
@@ -265,6 +261,17 @@ $(window).resize(function() {
 
 //main drag'n'drop logic
 $(document).ready(function() {
+	
+	var salata = $.parseJSON(sessionStorage.getItem('salata_tmp'));
+	if (salata == null) {
+		console.log('Nu este setat salata_tmp in session storage');
+	} else {
+		//remove the temporary salad on document ready
+		//maybe this will be replaced with a repopulation of the salad container from the temp_salad
+		sessionStorage.removeItem('salata_tmp');
+		console.log('A fost o salata salvata, dar am sters-o');
+	}
+	
 	// define ingredient and salad gallery and destination
 	var gallery = $('.kj'), destination = $(".empty-box");
 
@@ -319,7 +326,6 @@ $(document).ready(function() {
 			var dataName = data.name;
 			var dataCalories = data.calories;
 			var dataProtein = data.protein;
-			console.log(dataType);
 
 			if (dataType == 'ingredient') {
 				//if we receive an ingredient, first we check if there is already a salad -
@@ -354,7 +360,6 @@ $(document).ready(function() {
 						var total_price = parseFloat(salata.Price.replace(',', '.')) + ingredients_price;
 						salata.Total_Price = total_price.toFixed(2);
 						//save to temp salad in session
-						localStorage.removeItem('salata_tmp');
 						sessionStorage.setItem('salata_tmp', JSON.stringify(salata));
 					}
 				}
@@ -375,7 +380,6 @@ $(document).ready(function() {
 					//save the total price as a string with only two decimals
 					salata.Total_Price = total_price.toFixed(2);
 					//save to display and temp salad in session
-					localStorage.removeItem('salata_tmp');
 					sessionStorage.setItem('salata_tmp', JSON.stringify(salata));
 				} else {
 					//prepend the salad to the display
@@ -413,7 +417,6 @@ $(document).ready(function() {
 
 						salata.Crutoane = true;
 						//save to temp salad in session
-						localStorage.removeItem('salata_tmp');
 						sessionStorage.setItem('salata_tmp', JSON.stringify(salata));
 					}
 				}
@@ -424,18 +427,17 @@ $(document).ready(function() {
 					console.log('Alege prima dată o salată');
 				} else {
 					//if we have a salad ->
-					//check if a dressing is already addedd. 
+					//check if a dressing is already addedd.
 					if (salata.Dressing !== '') {
 						// if yes, we delete the existing dressing from the display and add the new one
 						$('ul.selected-dressing li').remove();
-					} 
+						console.log('Poţi adăuga un singur dressing. Dressingul a fost inlocuit');
+					}
 					//add the dressing to the display
 					$('ul.selected-dressing').append(ui.draggable.clone());
 					//set the dressing name - no matter if it was already added or not
-					console.log(dataName);
 					salata.Dressing = dataName;
 					//save to temp salad in session
-					localStorage.removeItem('salata_tmp');
 					sessionStorage.setItem('salata_tmp', JSON.stringify(salata));
 
 				}
