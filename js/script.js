@@ -276,6 +276,20 @@ $(document).ready(function() {
 		helper : "clone",
 		cursor : "move",
 		refreshPositions : true,
+		start : function(event, ui) {
+			var data = ui.helper[0]['dataset'];
+			var dataType = data.type;
+			var dataName = data.name;
+			if (dataType == 'salata') {
+				$('.ui-draggable-dragging').animate({
+					width : "300px",
+					height : "auto"
+				}, 500);
+			}
+			$('.ui-draggable-dragging').prepend(dataName);
+		},
+		snap : $('.empty-box'),
+		snapTolerance : 30,
 	});
 
 	// let the ingredient items be draggable
@@ -291,18 +305,13 @@ $(document).ready(function() {
 	destination.droppable({
 		accept : ".combination ul > li",
 		activeClass : "ui-state-highlight",
-		tolerance : "fit",
-		drop : function(event, ui) {
-			// $("ul.selected-salad").appendTo(destination);
-			$(this).find('ul').append(ui.draggable.clone());
-			$("ul.selected-salad li:first-child").animate({
-				width : "300px"
-			}, 1500).find("img").animate({
-				height : "auto"
-			}, 1500);
+		tolerance : "intersect",
+		start : function() {
+			//we get the original position of the element so that in case we want to reject it
+			//we can send it back to this position
+			$(this).data("origPosition", $(this).position());
 		},
-		deactivate : function(event, ui) {
-
+		drop : function(event, ui) {
 			//get data set
 			var data = ui.draggable[0]['dataset'];
 			var dataType = data.type;
@@ -310,84 +319,180 @@ $(document).ready(function() {
 			var dataName = data.name;
 			var dataCalories = data.calories;
 			var dataProtein = data.protein;
+			console.log(dataType);
 
-			if (dataType == 'ingredient ') {
-				//if we receive an ingredient, first we check if there is already a salad - if not, we return a warning to choose a salad first
-				//if we have a salad ->
-				// we create the ingredient object, take the session of the temp salad and add the ingredient
-				//we check if there are already 2 ingredients - if yes, we do not add another but warn to delete some ingredients to switch
-				
-				//put all ingredient info in an object
-				var data_ingred = {
-					Name : dataName,
-					Type : dataType,
-					Calories : dataCalories,
-					Proteins : dataProtein,
-					Price : dataPrice
-				};
-			} else if (dataType == 'salad'){
-				//if we receive a salad, we check if there is already a salad chosen. if yes, we delete the existing salad both in the dispay and in the temp salad
-				//but we retain the other already chosen ingredients. we build the salad object, add the existing ingredients (if any) and save to display and temp salad in session
-				
-			} else if (dataType == 'crutoane') {
-				//we get the temp salad from the session , check if crutons are not already addedd. if not, we add crutons
-				
-			} else if (dataType == 'dressing'){
-				//we check if there is already a dressing. if yes, we delete the existing dressing from the temp session and add the new one - update both display and temp salad in session
-				
-			}
-			//parse current salad from session
-			var salate = $.parseJSON(sessionStorage.getItem('salata_tmp'));
-			//if we already have a salad
-			if (salate !== null) {
-
-				if (salate.Ingrediente.length > 1) {
-					console.log('Max 2 ingredient');
-					return false;
+			if (dataType == 'ingredient') {
+				//if we receive an ingredient, first we check if there is already a salad -
+				var salata = $.parseJSON(sessionStorage.getItem('salata_tmp'));
+				//if not, we return a warning to choose a salad first
+				if (salata == null) {
+					console.log('Alege prima data o salata');
 				} else {
-					salate.Total_Price = getCommaDelimitedStringFromStringValue(getFloatValueFromCommaDelimitedString(salate.Total_Price) + getFloatValueFromCommaDelimitedString(dataPrice));
-					salate.Ingrediente.push(data_ingred);
-					sessionStorage.setItem('salata_tmp', JSON.stringify(salate));
-				}
+					//if we have a salad ->
+					//we check if there are already 2 ingredients -
+					if (salata.Ingrediente.length > 1) {
+						//if yes, we do not add another but warn to delete some ingredients to switch
+						//send back the element to its original position
+						console.log('La combinaţia noastră poţi adăuga maxim două ingrediente');
+						ui.draggable.animate(ui.draggable.data("origPosition"), "fast");
+						return false;
+					} else {
+						//put the ingredient in the display
+						$('ul.selected-ingredients').append(ui.draggable.clone());
 
-			} else {
-				//if we don't have a salad yet
-				if (dataType === 'salata') {
-					var salate = {
+						// we create the ingredient object, take the session of the temp salad and add the ingredient
+						var data_ingred = {
+							Name : dataName,
+							Type : dataType,
+							Calories : dataCalories,
+							Proteins : dataProtein,
+							Price : dataPrice
+						};
+						salata.Ingrediente.push(data_ingred);
+						//recalculate total price
+						var ingredients_price = totalIngPrice(salata);
+						var total_price = parseFloat(salata.Price.replace(',', '.')) + ingredients_price;
+						salata.Total_Price = total_price.toFixed(2);
+						//save to temp salad in session
+						localStorage.removeItem('salata_tmp');
+						sessionStorage.setItem('salata_tmp', JSON.stringify(salata));
+					}
+				}
+			} else if (dataType == 'salata') {
+				//if we receive a salad,
+				//we check if there is already a salad chosen or is a different one then what we received
+				var salata = $.parseJSON(sessionStorage.getItem('salata_tmp'));
+				if ((salata != null) && (salata.Type == 'salata')) {
+					//if yes, we replace the existing salad in the temp salad
+					salata.Name = dataName;
+					salata.Price = dataPrice;
+					//remove it from the dispay and add the new salad
+					$("ul.selected-salad li").remove();
+					$('ul.selected-salad').prepend(ui.draggable.clone());
+					//we recalculate the total price, including the old ingredients
+					var ingredients_price = totalIngPrice(salata);
+					var total_price = parseFloat(dataPrice.replace(',', '.')) + ingredients_price;
+					//save the total price as a string with only two decimals
+					salata.Total_Price = total_price.toFixed(2);
+					//save to display and temp salad in session
+					localStorage.removeItem('salata_tmp');
+					sessionStorage.setItem('salata_tmp', JSON.stringify(salata));
+				} else {
+					//prepend the salad to the display
+					$('ul.selected-salad').prepend(ui.draggable.clone());
+					//create the initial temporary salad and save it to the session
+					var salata = {
 						Name : dataName,
 						Type : dataType,
+						Price : dataPrice,
 						Ingrediente : [],
+						Crutoane : false,
+						Dressing : '',
 						Total_Price : dataPrice
 					};
+					sessionStorage.setItem('salata_tmp', JSON.stringify(salata));
+				}
 
-					sessionStorage.setItem('salata_tmp', JSON.stringify(salate));
+			} else if (dataType == 'crutoane') {
+				//we get the temp salad from the session ,
+				var salata = $.parseJSON(sessionStorage.getItem('salata_tmp'));
+				if (salata == null) {
+					console.log('Alege prima dată o salată');
 				} else {
-					console.log('Choose a salad first!');
-					if (destination.dataType !== "salata") {
-						$("li", destination).remove();
-					}
+					//if we have a salad ->
+					//check if crutons are not already addedd. if not, we add crutons
+					if (salata.Crutoane == true) {
+						//if yes, we do not add another but warn to delete some ingredients to switch
+						//send back the element to its original position
+						console.log('Poţi adăuga crutoanele doar o dată');
+						ui.draggable.animate(ui.draggable.data("origPosition"), "fast");
+						return false;
+					} else {
+						//put the ingredient in the display and in the temp salad
+						$('ul.selected-crutons').append(ui.draggable.clone());
 
-					console.log(ui);
+						salata.Crutoane = true;
+						//save to temp salad in session
+						localStorage.removeItem('salata_tmp');
+						sessionStorage.setItem('salata_tmp', JSON.stringify(salata));
+					}
+				}
+
+			} else if (dataType == 'dressing') {
+				var salata = $.parseJSON(sessionStorage.getItem('salata_tmp'));
+				if (salata == null) {
+					console.log('Alege prima dată o salată');
+				} else {
+					//if we have a salad ->
+					//check if a dressing is already addedd. 
+					if (salata.Dressing !== '') {
+						// if yes, we delete the existing dressing from the display and add the new one
+						$('ul.selected-dressing li').remove();
+					} 
+					//add the dressing to the display
+					$('ul.selected-dressing').append(ui.draggable.clone());
+					//set the dressing name - no matter if it was already added or not
+					console.log(dataName);
+					salata.Dressing = dataName;
+					//save to temp salad in session
+					localStorage.removeItem('salata_tmp');
+					sessionStorage.setItem('salata_tmp', JSON.stringify(salata));
+
 				}
 			}
-			console.log(salate);
+			//parse current salad from session
+			// var salate = $.parseJSON(sessionStorage.getItem('salata_tmp'));
+			// //if we already have a salad
+			// if (salate !== null) {
+			//
+			// if (salate.Ingrediente.length > 1) {
+			// console.log('Max 2 ingredient');
+			// return false;
+			// } else {
+			// salate.Total_Price = getCommaDelimitedStringFromStringValue(getFloatValueFromCommaDelimitedString(salate.Total_Price) + getFloatValueFromCommaDelimitedString(dataPrice));
+			// salate.Ingrediente.push(data_ingred);
+			// sessionStorage.setItem('salata_tmp', JSON.stringify(salate));
+			// }
+			//
+			// } else {
+			// //if we don't have a salad yet
+			// if (dataType === 'salata') {
+			// var salate = {
+			// Name : dataName,
+			// Type : dataType,
+			// Ingrediente : [],
+			// Price : dataPrice,
+			// Total_Price : dataPrice
+			// };
+			//
+			// sessionStorage.setItem('salata_tmp', JSON.stringify(salate));
+			// } else {
+			// console.log('Choose a salad first!');
+			// if (destination.dataType !== "salata") {
+			// $("li", destination).remove();
+			// }
+			//
+			// //console.log(ui);
+			// }
+			// }
+			//console.log(salate);
 		}
 	});
 
-	var getFloatValueFromCommaDelimitedString = function(stringValue) {
-		return parseFloat(stringValue.replace(/,/g, '.'));
-	};
-	var getCommaDelimitedStringFromStringValue = function(floatValue) {
-		return floatValue.toString().replace(/\./g, ',');
-	};
+	// var getFloatValueFromCommaDelimitedString = function(stringValue) {
+	// return parseFloat(stringValue.replace(/,/g, '.'));
+	// };
+	// var getCommaDelimitedStringFromStringValue = function(floatValue) {
+	// return floatValue.toString().replace(/\./g, ',');
+	// };
 	// let the gallery be droppable as well, accepting items from the trash
-	gallery.droppable({
-		accept : destination,
-		activeClass : "custom-state-active",
-		drop : function(event, ui) {
-
-		}
-	});
+	// gallery.droppable({
+	// accept : destination,
+	// activeClass : "custom-state-active",
+	// drop : function(event, ui) {
+	//
+	// }
+	// });
 
 	// image deletion function
 	// function deleteImage( $item ) {
@@ -406,3 +511,15 @@ $(document).ready(function() {
 	// });
 	// }
 });
+function totalIngPrice(data) {
+	//calculate the total price of all added ingredients
+	var ingredients_price = 0;
+	if (data.Ingrediente.length > 0) {
+		for ( i = 0; i < data.Ingrediente.length; i++) {
+			//loop through ingredients
+			//add price from processed string (comma replaced with dot)
+			ingredients_price = ingredients_price + parseFloat(data.Ingrediente[i].Price.replace(',', '.'));
+		};
+	}
+	return ingredients_price;
+}

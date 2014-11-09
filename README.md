@@ -1,9 +1,6 @@
-Saladbox
-========
+#SaladBox Home Delivery#
 
-##SaladBox Home Delivery##
-
-This is a project to develope an online ordering system for the SaladBox network in Romania.
+This aim of this project is to develop an online ordering system for the SaladBox network in Romania.
 
 **The main parts of the project are:**
 

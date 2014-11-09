@@ -1,950 +1,1068 @@
 <!DOCTYPE html>
-<html lang="en"> 
-  <head> 
-    <title>Salad Box</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,100,500,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
-    
-    <script type="text/javascript" src="js/modernizr.custom.82896.js"></script>
-  </head>
-  <body>
-  	
-  	
-  	<div class="container">
-  		<div class="row">	
-			<!-- Start wrapper -->
-			<div class="wrapper clearfix">
-				
-				<!-- Start menu-head -->
-				<div class="content-head">
-					<h2>Alege salata</h2>
-					<div class="divider"> </div>
-				</div>
-				<!-- End menu-head -->
-				
-				<!-- Start menu-wrapper -->
-				<div class="menu-wrapper clearfix">
-					<ul class="nav nav-tabs" role="tablist" id="tabs" data-tabs="tabs">
-					  <li class="active"><a role="tab" data-toggle="tab" href="#our">Combinația noastră</a></li>
-					  <li><a role="tab" data-toggle="tab" href="#your">Combinația voastră</a></li>
-					  <li class="dropdown">
-					  	<a data-toggle="dropdown" href="#">Alte produse<span class="caret"> </span></a>
-					  	<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-						    <li><a tabindex="-1" role="tab" data-toggle="tab" href="#soup">Supe</a></li>
-						    <li><a tabindex="-1" role="tab" data-toggle="tab" href="#fresh">Freshuri</a></li>
-						    <li><a href="#">Bauturi racoritoare</a></li>
+<html lang="en">
+	<head>
+		<title>Salad Box</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,100,500,700,900' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+
+		<script type="text/javascript" src="js/modernizr.custom.82896.js"></script>
+	</head>
+	<body>
+
+		<div class="container">
+			<div class="row">
+				<!-- Start wrapper -->
+				<div class="wrapper clearfix">
+
+					<!-- Start menu-head -->
+					<div class="content-head">
+						<h2>Alege salata</h2>
+						<div class="divider"></div>
+					</div>
+					<!-- End menu-head -->
+
+					<!-- Start menu-wrapper -->
+					<div class="menu-wrapper clearfix">
+						<ul class="nav nav-tabs" role="tablist" id="tabs" data-tabs="tabs">
+							<li class="active">
+								<a role="tab" data-toggle="tab" href="#our">Combinația noastră</a>
+							</li>
+							<li>
+								<a role="tab" data-toggle="tab" href="#your">Combinația voastră</a>
+							</li>
+							<li class="dropdown">
+								<a data-toggle="dropdown" href="#">Alte produse<span class="caret"> </span></a>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+									<li>
+										<a tabindex="-1" role="tab" data-toggle="tab" href="#soup">Supe</a>
+									</li>
+									<li>
+										<a tabindex="-1" role="tab" data-toggle="tab" href="#fresh">Freshuri</a>
+									</li>
+									<li>
+										<a href="#">Bauturi racoritoare</a>
+									</li>
+								</ul>
+							</li>
 						</ul>
-					  </li>
-					</ul>
-					
-					<div class="tab-content">
-						<!-- Start our-combination -->
-						<div class="combination tab-pane fade in active clearfix ui-widget" id="our">
-							
-							<!-- Start our-salads -->
-							<div class="our-salads salad-option">
-								<h2>Salate</h2>
-								<ul class="clearfix">
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="19/19,99 lei / 420gr" data-content="salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde." data-type="salata" data-price="19" data-name="alaska">								
-										<img src="img/salads/big-img.png" alt="Alaska" class="img-responsive" />									
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title=" 12,99/14,50 lei / 420gr" data-content="salată verde, măsline, feta, roşii, ceapă roşie, castravete verde." data-type="salata" data-price="12,99" data-name="Athena">
-										<img src="img/salads/big-img.png" alt="Athena" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title=" 16/17,99 lei / 410gr" data-content="salată mixtă, morcov, fasole verde, conopidă, ou, ceapă verde, bacon." data-type="salata" data-price="16" data-name="Boston">
-										<img src="img/salads/big-img.png" alt="Boston" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title=" 14,99/15,99 lei / 420gr" data-content="salată verde, pui grill, mozzarella, ou fiert, castravete verde, crutoane." data-type="salata" data-price="14,99" data-name="Caesar">
-										<img src="img/salads/big-img.png" alt="Caesar" class="img-responsive" />
-									</li>
-									<li data-placement="bottom" data-toggle="popover" data-trigger="hover" title=" 18/19,99 lei / 420gr" data-content="salată verde, vită grill, ciuperci crude/ciuperci fierte, feta, ardei copt, ananas, castravete verde." data-type="salata" data-price="18" data-name="Dakota">
-										<img src="img/salads/big-img.png" alt="Dakota" class="img-responsive" />
-									</li>
-									<li data-placement="bottom" data-toggle="popover" data-trigger="hover" title=" 14,99/15,99 lei / 440gr" data-content="salată verde, pui grill, măr, morcov, ţelină, feta, porumb şi ananas." data-type="salata" data-price="14,99" data-name="Green Box">
-										<img src="img/salads/big-img.png" alt="Green box" class="img-responsive" />
-									</li>
-									<li data-placement="bottom" data-toggle="popover" data-trigger="hover" title=" 12,99/14,50 lei / 400gr" data-content="salată verde, măsline negre, roşii, porumb, ananas, castravete verde." data-type="salata" data-price="12,99" data-name="Toskana">
-										<img src="img/salads/big-img.png" alt="Toskana" class="img-responsive" />
-									</li>
-									<li data-placement="bottom" data-toggle="popover" data-trigger="hover" title=" 16/17,99 lei / 420gr" data-content="salată mixtă, ceapă roşie, porumb, măsline negre, morcov, lămâie, ton." data-type="salata" data-price="16" data-name="Tuna">
-										<img src="img/salads/big-img.png" alt="Tuna" class="img-responsive" />
-									</li>
-								</ul>
-							</div>
-							<!-- End our-salads -->
-							
-							<!-- Start ingredients -->
-							<div class="ingredients salad-option">
-								<h2>Ingrediente</h2>
-								<ul class="clearfix">
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ananas" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ananas">								
-										<img src="img/ingrediente/ananas2.png" alt="Ananas" class="img-responsive" />									
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ardei copt" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ardei Copt">
-										<img src="img/ingrediente/ardei-copt2.png" alt="Ardei copt" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ardei verde" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ardei Verde">
-										<img src="img/ingrediente/ardei-verde.png" alt="Ardei verde" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ardei Kapia" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ardei Kapia">
-										<img src="img/ingrediente/ardei.png" alt="Ardei" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Castraveti murati" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Castraveti murati">
-										<img src="img/ingrediente/castravete-murat.png" alt="Castravete murati" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Castraveti" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Castraveti">
-										<img src="img/ingrediente/castraveti2.png" alt="Castraveti" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ceapa rosie" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ceapa rosie">
-										<img src="img/ingrediente/ceapa-rosie2.png" alt="Ceapa rosie" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ceapa verde" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ceapa verde">
-										<img src="img/ingrediente/ceapa-verde.png" alt="Ceapa verde" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ciuperci crude" data-content="1,5 lei / 40gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ciuperci crude">
-										<img src="img/ingrediente/ciuperci-crude2.png" alt="Ciuperci crude" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ciuperci" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ciuperci">
-										<img src="img/ingrediente/ciuperci.png" alt="Ciuperci" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Conopida" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Conopida">
-										<img src="img/ingrediente/cocopida.png" alt="Cocopida" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Fasole rosie" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Fasole rosie">
-										<img src="img/ingrediente/fasole-rosie.png" alt="Fasole rosie" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Fasole verde" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Fasole verde">
-										<img src="img/ingrediente/fasole-verde.png" alt="Fasole verde" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Lamaie" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Lamaie">
-										<img src="img/ingrediente/lamaie.jpg" alt="Lamaie" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Linte" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Linte">
-										<img src="img/ingrediente/linte.png" alt="Linte" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Masline negre" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Masline negre">
-										<img src="img/ingrediente/masline-negre.png" alt="Masline-negre" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Mazare" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Mazare">
-										<img src="img/ingrediente/mazare.png" alt="Mazare" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Mere" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Mere">
-										<img src="img/ingrediente/mere2.png" alt="Mere" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Morcovi" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Morcovi">
-										<img src="img/ingrediente/morcov11.png" alt="Morcovi" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Musli" data-content="1,5 lei / 20gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Musli">
-										<img src="img/ingrediente/musli.png" alt="Musli" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Oua" data-content="1,5 lei / buc." data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Oua">
-										<img src="img/ingrediente/ou-bun.png" alt="Oua" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Pepene" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Pepene">
-										<img src="img/ingrediente/pepene.png" alt="Pepene" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Porumb" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Porumb">
-										<img src="img/ingrediente/porumb2.png" alt="Porumb" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ridichi" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ridichi">
-										<img src="img/ingrediente/ridichi.jpg" alt="Ridichi" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Rosii" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Rosii">
-										<img src="img/ingrediente/rosii1.png" alt="Rosii" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Salata" data-content="1,5 lei / 80gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Salata">
-										<img src="img/ingrediente/salata.png" alt="Salata" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Seminte de dovleac" data-content="1,5 lei / 20gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Seminte de dovleac">
-										<img src="img/ingrediente/seminte-de-dovleac.png" alt="Seminte de Dovleac" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Seminte de floarea soarelui" data-content="1,5 lei / 20gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Seminte de floarea soarelui">
-										<img src="img/ingrediente/seminte.png" alt="Seminte" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Sfecla rosie" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Sfecla rosie">
-										<img src="img/ingrediente/sfecla-rosie2.png" alt="Sfecla Rosie" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Spanac" data-content="1,5 lei / 20gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Spanac">
-										<img src="img/ingrediente/spanac2.png" alt="Spanac" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Stafide" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Stafide">
-										<img src="img/ingrediente/stafide.jpg" alt="Stafide" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Struguri" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Struguri">
-										<img src="img/ingrediente/strugure.png" alt="Strugure" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Morcovi" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Morcovi">
-										<img src="img/ingrediente/Untitled-1.jpg" alt="Morcovi" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Varza" data-content="1,5 lei / 70gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Varza">
-										<img src="img/ingrediente/varza.png" alt="Varza" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Cascaval" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Cascaval">
-										<img src="img/ingrediente/cascaval.png" alt="Cascaval" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Parmezan" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Parmezan">
-										<img src="img/ingrediente/parmezan.png" alt="Parmezan" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Feta" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Feta">
-										<img src="img/ingrediente/feta2.png" alt="Feta" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Rucola" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Rucola">
-										<img src="img/ingrediente/1.png" alt="1" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Cascaval" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Cascaval">
-										<img src="img/ingrediente/2.png" alt="2" class="img-responsive" />
-									</li>
-								</ul>
-							</div>
-							<!-- End ingredients -->
-							
-							<!-- Start empty-box for drag and drop -->
-							<div class="empty-box">
-								<ul class="selected-salad">
-									
-								</ul>
-							</div>
-							<!-- End empty-box for drag and drop -->
-							
-							<!-- Start croutons -->
-							<div class="croutons salad-option">
-								<h2>Crutoane</h2>
-								<ul class="clearfix">
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr"  data-type="crutoane" data-calories="30" data-protein="50" data-price="1,5" data-name="Crutoane">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-								</ul>
-							</div>
-							<!-- End croutons -->
-							
-							<!-- Start dressing -->
-							<div class="dressing salad-option">
-								<h2>Dressing</h2>
-								<ul class="clearfix">
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Caesar" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Branza si usturoi" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-								</ul>
-							</div>
-							<!-- End dressing -->
-							
-						</div>
-						<!-- End our-combination -->
-						
-						<!-- Start your-combination -->
-						<div class="combination fade tab-pane clearfix" id="your">
-							
-							<!-- Start our-salads -->
-							<div class="our-salads salad-option">
-								<h2>Carne</h2>
-								<ul class="clearfix meats">
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Bacon" data-content="4 lei / 70gr" data-type="carne">								
-										<img src="img/meat/bacon-bunn.png" alt="Bacon" class="img-responsive" />									
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Pui" data-content="4 lei / 80gr" data-type="carne">								
-										<img src="img/meat/pui.png" alt="Pui" class="img-responsive" />									
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Somon" data-content="4 lei / 50gr" data-type="carne">								
-										<img src="img/meat/somon.png" alt="Somon" class="img-responsive" />									
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ton" data-content="4 lei / 50gr" data-type="carne">								
-										<img src="img/meat/ton.png" alt="Ton" class="img-responsive" />									
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Vita" data-content="4 lei / 70gr" data-type="carne">								
-										<img src="img/meat/vita.png" alt="Vita" class="img-responsive" />									
-									</li>
-								</ul>
-							</div>
-							<!-- End our-salads -->
-							
-							<!-- Start ingredients -->
-							<div class="ingredients salad-option">
-								<h2>Ingrediente</h2>
-								<ul class="clearfix">
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ananas" data-content="1,5 lei / 50gr" data-type="ingrediente">								
-										<img src="img/ingrediente/ananas2.png" alt="Ananas" class="img-responsive" />									
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ardei copt" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/ardei-copt2.png" alt="Ardei copt" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ardei verde" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/ardei-verde.png" alt="Ardei verde" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ardei Kapia" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/ardei.png" alt="Ardei" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Castraveti murati" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/castravete-murat.png" alt="Castravete murati" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Castraveti" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/castraveti2.png" alt="Castraveti" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ceapa rosie" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/ceapa-rosie2.png" alt="Ceapa rosie" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ceapa verde" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/ceapa-verde.png" alt="Ceapa verde" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ciuperci crude" data-content="1,5 lei / 40gr" data-type="ingrediente">
-										<img src="img/ingrediente/ciuperci-crude2.png" alt="Ciuperci crude" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ciuperci" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/ciuperci.png" alt="Ciuperci" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Conopida" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/cocopida.png" alt="Cocopida" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Fasole rosie" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/fasole-rosie.png" alt="Fasole rosie" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Fasole verde" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/fasole-verde.png" alt="Fasole verde" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Lamaie" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/lamaie.jpg" alt="Lamaie" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Linte" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/linte.png" alt="Linte" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Masline negre" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/masline-negre.png" alt="Masline-negre" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Mazare" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/mazare.png" alt="Mazare" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Mere" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/mere2.png" alt="Mere" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Morcovi" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/morcov11.png" alt="Morcovi" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Musli" data-content="1,5 lei / 20gr" data-type="ingrediente">
-										<img src="img/ingrediente/musli.png" alt="Musli" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Oua" data-content="1,5 lei / buc." data-type="ingrediente">
-										<img src="img/ingrediente/ou-bun.png" alt="Oua" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Pepene" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/pepene.png" alt="Pepene" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Porumb" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/porumb2.png" alt="Porumb" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ridichi" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/ridichi.jpg" alt="Ridichi" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Rosii" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/rosii1.png" alt="Rosii" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Salata" data-content="1,5 lei / 80gr" data-type="ingrediente">
-										<img src="img/ingrediente/salata.png" alt="Salata" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Seminte de dovleac" data-content="1,5 lei / 20gr" data-type="ingrediente">
-										<img src="img/ingrediente/seminte-de-dovleac.png" alt="Seminte de Dovleac" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Seminte de floarea soarelui" data-content="1,5 lei / 20gr" data-type="ingrediente">
-										<img src="img/ingrediente/seminte.png" alt="Seminte" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Sfecla rosie" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/sfecla-rosie2.png" alt="Sfecla Rosie" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Spanac" data-content="1,5 lei / 20gr" data-type="ingrediente">
-										<img src="img/ingrediente/spanac2.png" alt="Spanac" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Stafide" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/stafide.jpg" alt="Stafide" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Struguri" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/strugure.png" alt="Strugure" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Morcovi" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/Untitled-1.jpg" alt="Morcovi" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Varza" data-content="1,5 lei / 70gr" data-type="ingrediente">
-										<img src="img/ingrediente/varza.png" alt="Varza" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Cascaval" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/cascaval.png" alt="Cascaval" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Parmezan" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/parmezan.png" alt="Parmezan" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Feta" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/feta2.png" alt="Feta" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Rucola" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/1.png" alt="1" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Cascaval" data-content="1,5 lei / 50gr" data-type="ingrediente">
-										<img src="img/ingrediente/2.png" alt="2" class="img-responsive" />
-									</li>
-								</ul>
-							</div>
-							<!-- End ingredients -->
-							
-							<!-- Start empty-box for drag and drop -->
-							<ul class="empty-box">
-								<li class="placeholder"><img src="img/salad-box.png" alt="Box" class="img-responsive" /></li>
-							</ul>
-							<!-- End empty-box for drag and drop -->
-							
-							<!-- Start croutons -->
-							<div class="croutons salad-option">
-								<h2>Crutoane</h2>
-								<ul class="clearfix">
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="crutoane">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-								</ul>
-							</div>
-							<!-- End croutons -->
-							
-							<!-- Start dressing -->
-							<div class="dressing salad-option">
-								<h2>Dressing</h2>
-								<ul class="clearfix">
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-									<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
-										<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
-									</li>
-								</ul>
-							</div>
-							<!-- End dressing -->
-							
-						</div>
-						<!-- End your-combination -->
-						
-						<!-- Start soup container -->
-						<div class="combination fade tab-pane clearfix" id="soup">
-							<h2>Supe</h2>
-							<ul class="clearfix">
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/supe/brocoli.png" alt="Brocoli" />
-										<h3>Supa crema de broccoli</h3>
-										<p>Ingrediente: broccoli, ceapă roşie, cartofi, usturoi, gran cucina (smântână).</p>
-										<span class="price">6,99/7,99 lei</span>
-										<span class="weight">350 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>
-								</li>
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/supe/ciuperci.png" alt="Cipuerci" />
-										<h3>Supa crema de ciuperci</h3>
-										<p>Ingrediente: ciuperci champignon, ceapă roşie, ţelină, usturoi, cartofi, gran cucina (smântână).</p>
-										<span class="price">6,99/7,99 lei</span>
-										<span class="weight">350 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>									
-								</li>
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/supe/conopida1.png" alt="Conopida" />
-										<h3>Supa crema de conpida</h3>
-										<p>Ingrediente: conopidă, ceapă roşie, cartofi, usturoi, gran cucina (smântână).</p>
-										<span class="price">6,99/7,99 lei</span>
-										<span class="weight">350 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>										
-								</li>
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/supe/dovlecel1.png" alt="Dovlecei" />
-										<h3>Supa crema de dovlecel</h3>
-										<p>Ingrediente: dovlecel verde, ceapă roşie, morcovi, ţelină, cartofi, usturoi, gran cucina (smântână).</p>
-										<span class="price">6,99/7,99 lei</span>
-										<span class="weight">350 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>										
-								</li>
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/supe/legume.png" alt="Legume" />
-										<h3>Supa crema de legume</h3>
-										<p>Ingrediente: cartofi, morcovi, ardei gras, ţelină, ceapă roşie, usturoi, gran cucina (smântână).</p>
-										<span class="price">6,99/7,99 lei</span>
-										<span class="weight">350 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>										
-								</li>
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/supe/linte2.png" alt="Linte" />
-										<h3>Supa crema de linte</h3>
-										<p>Ingrediente: linte, morcovi, ţelină, ceapă, cartofi, gran cucina (smântână).</p>
-										<span class="price">6,99/7,99 lei</span>
-										<span class="weight">350 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>										
-								</li>
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/supe/mazare1.png" alt="Mazare" />
-										<h3>Supa crema de mazare</h3>
-										<p>Ingrediente: mazăre, ceapă, morcovi, ţelină, usturoi, cartofi, gran cucina (smântână).</p>
-										<span class="price">6,99/7,99 lei</span>
-										<span class="weight">350 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>										
-								</li>
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/supe/supa-crema-de-linte-rosie.png" alt="Linte Rosie" />
-										<h3>Supa crema de linte rosie</h3>
-										<p>Ingrediente: linte roşie, ceapă, morcovi, ţelină, cartofi, gran cucina (smântână).</p>
-										<span class="price">6,99/7,99 lei</span>
-										<span class="weight">350 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>										
-								</li>
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/supe/supa-crema-de-porumb.png" alt="Porumb" />
-										<h3>Supa crema de porumb</h3>
-										<p>Ingrediente: porumb dulce, ceapă, morcovi, ţelină, cartofi, gran cucina (smântână).</p>
-										<span class="price">6,99/7,99 lei</span>
-										<span class="weight">350 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>											
-								</li>
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/supe/supa-crema-de-praz.png" alt="Praz" />
-										<h3>Supa crema de praz</h3>
-										<p>Ingrediente: praz, ceapă, morcovi, ţelină, cartofi, gran cucina (smântână).</p>
-										<span class="price">6,99/7,99 lei</span>
-										<span class="weight">350 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>										
-								</li>
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/supe/supa-crema-de-rosii.png" alt="Rosii" />
-										<h3>Supa crema de rosii</h3>
-										<p>Ingrediente: roşii, ceapă, morcovi, ţelină, cartofi, gran cucina (smântână).</p>
-										<span class="price">6,99/7,99 lei</span>
-										<span class="weight">350 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>											
-								</li>
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/supe/supa-crema-de-sfecla-rosie.png" alt="Sfecla rosie" />
-										<h3>Supa crema de sfecla rosie</h3>
-										<p>Ingrediente: sfeclă roşie, ceapă, morcovi, ţelină, cartofi, gran cucina (smântână).</p>
-										<span class="price">6,99/7,99 lei</span>
-										<span class="weight">350 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>											
-								</li>
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/supe/supa-crema-de-spanac.png" alt="Spanac" />
-										<h3>Supa crema de spanac</h3>
-										<p>Ingrediente: spanac, ceapă, morcovi, ţelină, cartofi, gran cucina (smântână).</p>
-										<span class="price">6,99/7,99 lei</span>
-										<span class="weight">350 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>										
-								</li>
-							</ul>
-							
-						</div>
-						<!-- End soup container -->
-						
-						<!-- Start soup container -->
-						<div class="combination fade tab-pane clearfix" id="fresh">
-							<h2>Freshuri</h2>
-							<ul class="clearfix">
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/fresh/freshuri-2.png" alt="Portocale" />
-										<h3>Fresh de portocale</h3>
-										<span class="price">7,99/9,99 lei</span>
-										<span class="weight">330 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>
-								</li>	
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/fresh/freshuri-2.png" alt="Portocale" />
-										<h3>Fresh de grapefruit</h3>
-										<span class="price">7,99/9,99 lei</span>
-										<span class="weight">330 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>
-								</li>	
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/fresh/freshuri-2.png" alt="Portocale" />
-										<h3>Fresh de morcov cu mar</h3>
-										<span class="price">7,99/9,99 lei</span>
-										<span class="weight">330 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>
-								</li>
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/fresh/freshuri-2.png" alt="Portocale" />
-										<h3>Fresh de grapefruit cu mar</h3>
-										<span class="price">7,99/9,99 lei</span>
-										<span class="weight">330 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>
-								</li>	
-								<li>
-									<div class="thumbnail clearfix">
-										<img src="img/fresh/limonada2.png" alt="Limonada" />
-										<h3>Limonada cu menta</h3>
-										<span class="price">5,99/6,50 lei</span>
-										<span class="weight">330 ml</span>
-										<a href="#" class="btn btn-default">Comanda</a>
-									</div>
-								</li>									
-							</ul>
-							
-						</div>
-						<!-- End soup container -->
-					</div>
-					
-					<!-- Start Settings -->
-					<div class="setting-wrapper clearfix">
-						<div class="setting-container clearfix">
-							<div class="setting-content">
-								<a href="#" class="setting" data-placement="top" data-toggle="popover" data-trigger="hover" title="Setări"></a>
-								<div class="setting-form">
-									<a href="#" class="closing-accordion"></a>
-									
-									<form method="post" action="#" class="clearfix">
-										
-										<div class="setting-left">
-											<fieldset>
-												<label for="nume">Nume:</label>
-												<input type="text" name="nume" value="" placeholder="Nume" id="nume" />
-											</fieldset>
-											<fieldset>
-												<label for="prenume">Prenume:</label>
-												<input type="text" name="prenume" value="" placeholder="Prenume" id="prenume" />
-											</fieldset>
-											<fieldset>
-												<label for="setting-email">Adresă de mail:</label>
-												<input type="text" name="setting-email" value="" placeholder="Adresă de mail" id="setting-email" />
-											</fieldset>
-											<fieldset>
-												<label for="setting-pw">Parola:</label>
-												<input type="text" name="setting-pw" value="" placeholder="Parola" id="setting-pw" />
-											</fieldset>
-											<fieldset>
-												<label for="repeat-setting-pw">Repetă parola:</label>
-												<input type="text" name="repeat-setting-pw" value="" placeholder="Repetă parola" id="repeat-setting-pw" />
-											</fieldset>
-										</div>
-										
-										<div class="setting-right">
-											<fieldset>				
-												<label for="city-select" class="city-set">Selectează orașul:</label>							
-												<div class="city-dropdown">													
-													<select name="select-city" id="city-select">
-														<option value="1">Cluj-Napoca</option>
-														<option value="2">București</option>
-														<option value="3">Brașov</option>
-														<option value="4">Timișoara</option>
-														<option value="5">Sibiu</option>
-													</select>
-												</div>
-											</fieldset>
-											<fieldset>
-												<label for="setting-address">Adresa:</label>
-												<input type="text" name="setting-address" value="" placeholder="Adresa" id="setting-address" />
-											</fieldset>
-																						
-										</div>
-										
-										<input type="checkbox" name="settings-check" id="settings-check" />
-										<label for="settings-check" class="check-set">Lorem Ipsum is simply dummy text of the printing</label>	
-										
-										<input type="submit" name="submit-settings" value="Salvează" class="btn btn-default" />
-										
-										
-									</form>
-								</div>
-							</div>
-							<div class="address-content">
-								<a href="#" class="address" data-placement="top" data-toggle="popover" data-trigger="hover" title="Adresele mele"></a>
-								<div class="address-accordion">
-									<a href="#" class="closing-accordion"></a>
-									<ul class="my-address">
-										<li>
-											<span class="close-address"></span>
-											<p><strong>Nume:</strong> John Doe</p>
-											<p><strong>Adresă de mail:</strong> johndoe@yahoo.ro</p>
-											<p><strong>Oraș:</strong> Cluj-Napoca</p>
-											<p><strong>Adresă:</strong> Str. Mehedinti, Nr. 102, Sc. 5, Ap. 80</p>
-										</li>
-										<li>
-											<span class="close-address"></span>
-											<p><strong>Nume:</strong> John Doe</p>
-											<p><strong>Adresă de mail:</strong> johndoe@yahoo.ro</p>
-											<p><strong>Oraș:</strong> Cluj-Napoca</p>
-											<p><strong>Adresă:</strong> Str. Mehedinti, Nr. 102, Sc. 5, Ap. 80</p>
-										</li>
-										<li>
-											<span class="close-address"></span>
-											<p><strong>Nume:</strong> John Doe</p>
-											<p><strong>Adresă de mail:</strong> johndoe@yahoo.ro</p>
-											<p><strong>Oraș:</strong> Cluj-Napoca</p>
-											<p><strong>Adresă:</strong> Str. Mehedinti, Nr. 102, Sc. 5, Ap. 80</p>
-										</li>
-										<li>
-											<span class="close-address"></span>
-											<p><strong>Nume:</strong> John Doe</p>
-											<p><strong>Adresă de mail:</strong> johndoe@yahoo.ro</p>
-											<p><strong>Oraș:</strong> Cluj-Napoca</p>
-											<p><strong>Adresă:</strong> Str. Mehedinti, Nr. 102, Sc. 5, Ap. 80</p>
-										</li>
-										<li>
-											<span class="close-address"></span>
-											<p><strong>Nume:</strong> John Doe</p>
-											<p><strong>Adresă de mail:</strong> johndoe@yahoo.ro</p>
-											<p><strong>Oraș:</strong> Cluj-Napoca</p>
-											<p><strong>Adresă:</strong> Str. Mehedinti, Nr. 102, Sc. 5, Ap. 80</p>
-										</li>
-									</ul>
-									<a href="#" class="btn btn-default" data-toggle="modal" data-target="#add-address">Adaugă adresă</a>
-								</div>
-							</div>
-							<div class="shopping-content">
-								<a href="#" class="shopping" data-placement="top" data-toggle="popover" data-trigger="hover" title="Salatele mele"></a>
-								<div class="shopping-menu">
-									<a href="#" class="closing-accordion"></a>
+
+						<div class="tab-content">
+							<!-- Start our-combination -->
+							<div class="combination tab-pane fade in active clearfix ui-widget" id="our">
+
+								<!-- Start our-salads -->
+								<div class="our-salads salad-option">
+									<h2>Salate</h2>
 									<ul class="clearfix">
-										<li>
-											<span class="delete-salad"></span>
-											<span class="buy-salad"></span>
-											<div class="thumbnail clearfix">
-												<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
-												<h4>Salata Alaska</h4>
-												<p>Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.</p>
-												<span class="salad-weight">420 g</span>
-												<span class="salad-price">19 lei</span>
-											</div>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="19/19,99 lei / 420gr" data-content="salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde." data-type="salata" data-price="19" data-name="alaska">
+											<img src="img/salads/big-img.png" alt="Alaska" class="img-responsive" />
 										</li>
-										<li>
-											<span class="delete-salad"></span>
-											<span class="buy-salad"></span>
-											<div class="thumbnail clearfix">
-												<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
-												<h4>Salata Alaska</h4>
-												<p>Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.</p>
-												<span class="salad-weight">420 g</span>
-												<span class="salad-price">19 lei</span>
-											</div>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title=" 12,99/14,50 lei / 420gr" data-content="salată verde, măsline, feta, roşii, ceapă roşie, castravete verde." data-type="salata" data-price="12,99" data-name="Athena">
+											<img src="img/salads/big-img.png" alt="Athena" class="img-responsive" />
 										</li>
-										<li>
-											<span class="delete-salad"></span>
-											<span class="buy-salad"></span>
-											<div class="thumbnail clearfix">
-												<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
-												<h4>Salata Alaska</h4>
-												<p>Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.</p>
-												<span class="salad-weight">420 g</span>
-												<span class="salad-price">19 lei</span>
-											</div>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title=" 16/17,99 lei / 410gr" data-content="salată mixtă, morcov, fasole verde, conopidă, ou, ceapă verde, bacon." data-type="salata" data-price="16" data-name="Boston">
+											<img src="img/salads/big-img.png" alt="Boston" class="img-responsive" />
 										</li>
-										<li>
-											<span class="delete-salad"></span>
-											<span class="buy-salad"></span>
-											<div class="thumbnail clearfix">
-												<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
-												<h4>Salata Alaska</h4>
-												<p>Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.</p>
-												<span class="salad-weight">420 g</span>
-												<span class="salad-price">19 lei</span>
-											</div>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title=" 14,99/15,99 lei / 420gr" data-content="salată verde, pui grill, mozzarella, ou fiert, castravete verde, crutoane." data-type="salata" data-price="14,99" data-name="Caesar">
+											<img src="img/salads/big-img.png" alt="Caesar" class="img-responsive" />
 										</li>
-										<li>
-											<span class="delete-salad"></span>
-											<span class="buy-salad"></span>
-											<div class="thumbnail clearfix">
-												<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
-												<h4>Salata Alaska</h4>
-												<p>Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.</p>
-												<span class="salad-weight">420 g</span>
-												<span class="salad-price">19 lei</span>
-											</div>
+										<li data-placement="bottom" data-toggle="popover" data-trigger="hover" title=" 18/19,99 lei / 420gr" data-content="salată verde, vită grill, ciuperci crude/ciuperci fierte, feta, ardei copt, ananas, castravete verde." data-type="salata" data-price="18" data-name="Dakota">
+											<img src="img/salads/big-img.png" alt="Dakota" class="img-responsive" />
 										</li>
-										<li>
-											<span class="delete-salad"></span>
-											<span class="buy-salad"></span>
-											<div class="thumbnail clearfix">
-												<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
-												<h4>Salata Alaska</h4>
-												<p>Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.</p>
-												<span class="salad-weight">420 g</span>
-												<span class="salad-price">19 lei</span>
-											</div>
+										<li data-placement="bottom" data-toggle="popover" data-trigger="hover" title=" 14,99/15,99 lei / 440gr" data-content="salată verde, pui grill, măr, morcov, ţelină, feta, porumb şi ananas." data-type="salata" data-price="14,99" data-name="Green Box">
+											<img src="img/salads/big-img.png" alt="Green box" class="img-responsive" />
 										</li>
-										<li>
-											<span class="delete-salad"></span>
-											<span class="buy-salad"></span>
-											<div class="thumbnail clearfix">
-												<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
-												<h4>Salata Alaska</h4>
-												<p>Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.</p>
-												<span class="salad-weight">420 g</span>
-												<span class="salad-price">19 lei</span>
-											</div>
+										<li data-placement="bottom" data-toggle="popover" data-trigger="hover" title=" 12,99/14,50 lei / 400gr" data-content="salată verde, măsline negre, roşii, porumb, ananas, castravete verde." data-type="salata" data-price="12,99" data-name="Toskana">
+											<img src="img/salads/big-img.png" alt="Toskana" class="img-responsive" />
 										</li>
-										<li>
-											<span class="delete-salad"></span>
-											<span class="buy-salad"></span>
-											<div class="thumbnail clearfix">
-												<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
-												<h4>Salata Alaska</h4>
-												<p>Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.</p>
-												<span class="salad-weight">420 g</span>
-												<span class="salad-price">19 lei</span>
-											</div>
+										<li data-placement="bottom" data-toggle="popover" data-trigger="hover" title=" 16/17,99 lei / 420gr" data-content="salată mixtă, ceapă roşie, porumb, măsline negre, morcov, lămâie, ton." data-type="salata" data-price="16" data-name="Tuna">
+											<img src="img/salads/big-img.png" alt="Tuna" class="img-responsive" />
 										</li>
 									</ul>
 								</div>
+								<!-- End our-salads -->
+
+								<!-- Start ingredients -->
+								<div class="ingredients salad-option">
+									<h2>Ingrediente</h2>
+									<ul class="clearfix">
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ananas" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ananas">
+											<img src="img/ingrediente/ananas2.png" alt="Ananas" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ardei copt" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ardei Copt">
+											<img src="img/ingrediente/ardei-copt2.png" alt="Ardei copt" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ardei verde" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ardei Verde">
+											<img src="img/ingrediente/ardei-verde.png" alt="Ardei verde" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ardei Kapia" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ardei Kapia">
+											<img src="img/ingrediente/ardei.png" alt="Ardei" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Castraveti murati" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Castraveti murati">
+											<img src="img/ingrediente/castravete-murat.png" alt="Castravete murati" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Castraveti" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Castraveti">
+											<img src="img/ingrediente/castraveti2.png" alt="Castraveti" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ceapa rosie" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ceapa rosie">
+											<img src="img/ingrediente/ceapa-rosie2.png" alt="Ceapa rosie" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ceapa verde" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ceapa verde">
+											<img src="img/ingrediente/ceapa-verde.png" alt="Ceapa verde" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ciuperci crude" data-content="1,5 lei / 40gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ciuperci crude">
+											<img src="img/ingrediente/ciuperci-crude2.png" alt="Ciuperci crude" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ciuperci" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ciuperci">
+											<img src="img/ingrediente/ciuperci.png" alt="Ciuperci" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Conopida" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Conopida">
+											<img src="img/ingrediente/cocopida.png" alt="Cocopida" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Fasole rosie" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Fasole rosie">
+											<img src="img/ingrediente/fasole-rosie.png" alt="Fasole rosie" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Fasole verde" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Fasole verde">
+											<img src="img/ingrediente/fasole-verde.png" alt="Fasole verde" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Lamaie" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Lamaie">
+											<img src="img/ingrediente/lamaie.jpg" alt="Lamaie" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Linte" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Linte">
+											<img src="img/ingrediente/linte.png" alt="Linte" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Masline negre" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Masline negre">
+											<img src="img/ingrediente/masline-negre.png" alt="Masline-negre" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Mazare" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Mazare">
+											<img src="img/ingrediente/mazare.png" alt="Mazare" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Mere" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Mere">
+											<img src="img/ingrediente/mere2.png" alt="Mere" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Morcovi" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Morcovi">
+											<img src="img/ingrediente/morcov11.png" alt="Morcovi" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Musli" data-content="1,5 lei / 20gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Musli">
+											<img src="img/ingrediente/musli.png" alt="Musli" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Oua" data-content="1,5 lei / buc." data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Oua">
+											<img src="img/ingrediente/ou-bun.png" alt="Oua" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Pepene" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Pepene">
+											<img src="img/ingrediente/pepene.png" alt="Pepene" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Porumb" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Porumb">
+											<img src="img/ingrediente/porumb2.png" alt="Porumb" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ridichi" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Ridichi">
+											<img src="img/ingrediente/ridichi.jpg" alt="Ridichi" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Rosii" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Rosii">
+											<img src="img/ingrediente/rosii1.png" alt="Rosii" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Salata" data-content="1,5 lei / 80gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Salata">
+											<img src="img/ingrediente/salata.png" alt="Salata" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Seminte de dovleac" data-content="1,5 lei / 20gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Seminte de dovleac">
+											<img src="img/ingrediente/seminte-de-dovleac.png" alt="Seminte de Dovleac" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Seminte de floarea soarelui" data-content="1,5 lei / 20gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Seminte de floarea soarelui">
+											<img src="img/ingrediente/seminte.png" alt="Seminte" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Sfecla rosie" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Sfecla rosie">
+											<img src="img/ingrediente/sfecla-rosie2.png" alt="Sfecla Rosie" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Spanac" data-content="1,5 lei / 20gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Spanac">
+											<img src="img/ingrediente/spanac2.png" alt="Spanac" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Stafide" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Stafide">
+											<img src="img/ingrediente/stafide.jpg" alt="Stafide" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Struguri" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Struguri">
+											<img src="img/ingrediente/strugure.png" alt="Strugure" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Morcovi" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Morcovi">
+											<img src="img/ingrediente/Untitled-1.jpg" alt="Morcovi" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Varza" data-content="1,5 lei / 70gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Varza">
+											<img src="img/ingrediente/varza.png" alt="Varza" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Cascaval" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Cascaval">
+											<img src="img/ingrediente/cascaval.png" alt="Cascaval" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Parmezan" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Parmezan">
+											<img src="img/ingrediente/parmezan.png" alt="Parmezan" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Feta" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Feta">
+											<img src="img/ingrediente/feta2.png" alt="Feta" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Rucola" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Rucola">
+											<img src="img/ingrediente/1.png" alt="1" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Cascaval" data-content="1,5 lei / 50gr" data-type="ingredient" data-calories="30" data-protein="50" data-price="1,5" data-name="Cascaval">
+											<img src="img/ingrediente/2.png" alt="2" class="img-responsive" />
+										</li>
+									</ul>
+								</div>
+								<!-- End ingredients -->
+
+								<!-- Start empty-box for drag and drop -->
+								<div class="empty-box">
+									<ul class="selected-salad">
+
+									</ul>
+									<div class="extras">
+										<ul class="selected-ingredients">
+
+										</ul>
+										<ul class="selected-crutons">
+
+										</ul>
+										<ul class="selected-dressing">
+
+										</ul>
+									</div>
+								</div>
+								<!-- End empty-box for drag and drop -->
+
+								<!-- Start croutons -->
+								<div class="croutons salad-option">
+									<h2>Crutoane</h2>
+									<ul class="clearfix">
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="gratis / 50gr"  data-type="crutoane" data-calories="30" data-protein="50" data-name="Crutoane">
+											<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
+										</li>
+									</ul>
+								</div>
+								<!-- End croutons -->
+
+								<!-- Start dressing -->
+								<div class="dressing salad-option">
+									<h2>Dressing</h2>
+									<ul class="clearfix">
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Caesar" data-name="Caesar" data-content="usturoi, parmezan / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Emma" data-name="Emma" data-content="castravete, oregano / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Brânză şi usturoi" data-name="Brânză şi usturoi" data-content="branza, usturoi / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ranch" data-name="Ranch" data-content="arpagic, usturoi / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Usturoi şi mărar" data-name="Usturoi şi mărar" data-content="usturoi, marar / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Iaurt şi lămâie" data-name="Iaurt şi lămâie" data-content="iarut, lămâie / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Busuioc şi lămâie" data-name="Busuioc şi lămâie" data-content="busuioc, lămâie / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Mentă şi busuioc" data-name="Mentă şi busuioc" data-content="mentă, busuioc / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Mentă şi lămâie" data-name="Mentă şi lămâie" data-content="mentă, lamâie / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Italian" data-name="Italian" data-content="ierburi aromate / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Picant" data-name="Picant" data-content="picant / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Vinaigrette" data-name="Vinaigrette" data-content="otet / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+									</ul>
+								</div>
+								<!-- End dressing -->
+
 							</div>
+							<!-- End our-combination -->
+
+							<!-- Start your-combination -->
+							<div class="combination fade tab-pane clearfix" id="your">
+
+								<!-- Start our-salads -->
+								<div class="our-salads salad-option">
+									<h2>Carne</h2>
+									<ul class="clearfix meats">
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Bacon" data-content="4 lei / 70gr" data-type="carne">
+											<img src="img/meat/bacon-bunn.png" alt="Bacon" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Pui" data-content="4 lei / 80gr" data-type="carne">
+											<img src="img/meat/pui.png" alt="Pui" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Somon" data-content="4 lei / 50gr" data-type="carne">
+											<img src="img/meat/somon.png" alt="Somon" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ton" data-content="4 lei / 50gr" data-type="carne">
+											<img src="img/meat/ton.png" alt="Ton" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Vita" data-content="4 lei / 70gr" data-type="carne">
+											<img src="img/meat/vita.png" alt="Vita" class="img-responsive" />
+										</li>
+									</ul>
+								</div>
+								<!-- End our-salads -->
+
+								<!-- Start ingredients -->
+								<div class="ingredients salad-option">
+									<h2>Ingrediente</h2>
+									<ul class="clearfix">
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ananas" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/ananas2.png" alt="Ananas" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ardei copt" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/ardei-copt2.png" alt="Ardei copt" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ardei verde" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/ardei-verde.png" alt="Ardei verde" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ardei Kapia" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/ardei.png" alt="Ardei" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Castraveti murati" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/castravete-murat.png" alt="Castravete murati" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Castraveti" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/castraveti2.png" alt="Castraveti" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ceapa rosie" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/ceapa-rosie2.png" alt="Ceapa rosie" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ceapa verde" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/ceapa-verde.png" alt="Ceapa verde" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ciuperci crude" data-content="1,5 lei / 40gr" data-type="ingrediente">
+											<img src="img/ingrediente/ciuperci-crude2.png" alt="Ciuperci crude" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ciuperci" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/ciuperci.png" alt="Ciuperci" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Conopida" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/cocopida.png" alt="Cocopida" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Fasole rosie" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/fasole-rosie.png" alt="Fasole rosie" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Fasole verde" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/fasole-verde.png" alt="Fasole verde" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Lamaie" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/lamaie.jpg" alt="Lamaie" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Linte" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/linte.png" alt="Linte" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Masline negre" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/masline-negre.png" alt="Masline-negre" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Mazare" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/mazare.png" alt="Mazare" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Mere" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/mere2.png" alt="Mere" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Morcovi" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/morcov11.png" alt="Morcovi" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Musli" data-content="1,5 lei / 20gr" data-type="ingrediente">
+											<img src="img/ingrediente/musli.png" alt="Musli" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Oua" data-content="1,5 lei / buc." data-type="ingrediente">
+											<img src="img/ingrediente/ou-bun.png" alt="Oua" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Pepene" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/pepene.png" alt="Pepene" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Porumb" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/porumb2.png" alt="Porumb" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Ridichi" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/ridichi.jpg" alt="Ridichi" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Rosii" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/rosii1.png" alt="Rosii" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Salata" data-content="1,5 lei / 80gr" data-type="ingrediente">
+											<img src="img/ingrediente/salata.png" alt="Salata" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Seminte de dovleac" data-content="1,5 lei / 20gr" data-type="ingrediente">
+											<img src="img/ingrediente/seminte-de-dovleac.png" alt="Seminte de Dovleac" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Seminte de floarea soarelui" data-content="1,5 lei / 20gr" data-type="ingrediente">
+											<img src="img/ingrediente/seminte.png" alt="Seminte" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Sfecla rosie" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/sfecla-rosie2.png" alt="Sfecla Rosie" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Spanac" data-content="1,5 lei / 20gr" data-type="ingrediente">
+											<img src="img/ingrediente/spanac2.png" alt="Spanac" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Stafide" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/stafide.jpg" alt="Stafide" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Struguri" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/strugure.png" alt="Strugure" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Morcovi" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/Untitled-1.jpg" alt="Morcovi" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Varza" data-content="1,5 lei / 70gr" data-type="ingrediente">
+											<img src="img/ingrediente/varza.png" alt="Varza" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Cascaval" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/cascaval.png" alt="Cascaval" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Parmezan" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/parmezan.png" alt="Parmezan" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Feta" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/feta2.png" alt="Feta" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Rucola" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/1.png" alt="1" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Cascaval" data-content="1,5 lei / 50gr" data-type="ingrediente">
+											<img src="img/ingrediente/2.png" alt="2" class="img-responsive" />
+										</li>
+									</ul>
+								</div>
+								<!-- End ingredients -->
+
+								<!-- Start empty-box for drag and drop -->
+								<ul class="empty-box">
+									<li class="placeholder"><img src="img/salad-box.png" alt="Box" class="img-responsive" />
+									</li>
+								</ul>
+								<!-- End empty-box for drag and drop -->
+
+								<!-- Start croutons -->
+								<div class="croutons salad-option">
+									<h2>Crutoane</h2>
+									<ul class="clearfix">
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="crutoane">
+											<img src="img/ingrediente/crutoane.png" alt="Crutoane" class="img-responsive" />
+										</li>
+									</ul>
+								</div>
+								<!-- End croutons -->
+
+								<!-- Start dressing -->
+								<div class="dressing salad-option">
+									<h2>Dressing</h2>
+									<ul class="clearfix">
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+										<li data-placement="top" data-toggle="popover" data-trigger="hover" title="Crutoane" data-content="1,5 lei / 50gr" data-type="dressing">
+											<img src="img/ingrediente/dressing.png" alt="Crutoane" class="img-responsive" />
+										</li>
+									</ul>
+								</div>
+								<!-- End dressing -->
+
+							</div>
+							<!-- End your-combination -->
+
+							<!-- Start soup container -->
+							<div class="combination fade tab-pane clearfix" id="soup">
+								<h2>Supe</h2>
+								<ul class="clearfix">
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/supe/brocoli.png" alt="Brocoli" />
+											<h3>Supa crema de broccoli</h3>
+											<p>
+												Ingrediente: broccoli, ceapă roşie, cartofi, usturoi, gran cucina (smântână).
+											</p>
+											<span class="price">6,99/7,99 lei</span>
+											<span class="weight">350 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/supe/ciuperci.png" alt="Cipuerci" />
+											<h3>Supa crema de ciuperci</h3>
+											<p>
+												Ingrediente: ciuperci champignon, ceapă roşie, ţelină, usturoi, cartofi, gran cucina (smântână).
+											</p>
+											<span class="price">6,99/7,99 lei</span>
+											<span class="weight">350 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/supe/conopida1.png" alt="Conopida" />
+											<h3>Supa crema de conpida</h3>
+											<p>
+												Ingrediente: conopidă, ceapă roşie, cartofi, usturoi, gran cucina (smântână).
+											</p>
+											<span class="price">6,99/7,99 lei</span>
+											<span class="weight">350 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/supe/dovlecel1.png" alt="Dovlecei" />
+											<h3>Supa crema de dovlecel</h3>
+											<p>
+												Ingrediente: dovlecel verde, ceapă roşie, morcovi, ţelină, cartofi, usturoi, gran cucina (smântână).
+											</p>
+											<span class="price">6,99/7,99 lei</span>
+											<span class="weight">350 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/supe/legume.png" alt="Legume" />
+											<h3>Supa crema de legume</h3>
+											<p>
+												Ingrediente: cartofi, morcovi, ardei gras, ţelină, ceapă roşie, usturoi, gran cucina (smântână).
+											</p>
+											<span class="price">6,99/7,99 lei</span>
+											<span class="weight">350 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/supe/linte2.png" alt="Linte" />
+											<h3>Supa crema de linte</h3>
+											<p>
+												Ingrediente: linte, morcovi, ţelină, ceapă, cartofi, gran cucina (smântână).
+											</p>
+											<span class="price">6,99/7,99 lei</span>
+											<span class="weight">350 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/supe/mazare1.png" alt="Mazare" />
+											<h3>Supa crema de mazare</h3>
+											<p>
+												Ingrediente: mazăre, ceapă, morcovi, ţelină, usturoi, cartofi, gran cucina (smântână).
+											</p>
+											<span class="price">6,99/7,99 lei</span>
+											<span class="weight">350 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/supe/supa-crema-de-linte-rosie.png" alt="Linte Rosie" />
+											<h3>Supa crema de linte rosie</h3>
+											<p>
+												Ingrediente: linte roşie, ceapă, morcovi, ţelină, cartofi, gran cucina (smântână).
+											</p>
+											<span class="price">6,99/7,99 lei</span>
+											<span class="weight">350 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/supe/supa-crema-de-porumb.png" alt="Porumb" />
+											<h3>Supa crema de porumb</h3>
+											<p>
+												Ingrediente: porumb dulce, ceapă, morcovi, ţelină, cartofi, gran cucina (smântână).
+											</p>
+											<span class="price">6,99/7,99 lei</span>
+											<span class="weight">350 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/supe/supa-crema-de-praz.png" alt="Praz" />
+											<h3>Supa crema de praz</h3>
+											<p>
+												Ingrediente: praz, ceapă, morcovi, ţelină, cartofi, gran cucina (smântână).
+											</p>
+											<span class="price">6,99/7,99 lei</span>
+											<span class="weight">350 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/supe/supa-crema-de-rosii.png" alt="Rosii" />
+											<h3>Supa crema de rosii</h3>
+											<p>
+												Ingrediente: roşii, ceapă, morcovi, ţelină, cartofi, gran cucina (smântână).
+											</p>
+											<span class="price">6,99/7,99 lei</span>
+											<span class="weight">350 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/supe/supa-crema-de-sfecla-rosie.png" alt="Sfecla rosie" />
+											<h3>Supa crema de sfecla rosie</h3>
+											<p>
+												Ingrediente: sfeclă roşie, ceapă, morcovi, ţelină, cartofi, gran cucina (smântână).
+											</p>
+											<span class="price">6,99/7,99 lei</span>
+											<span class="weight">350 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/supe/supa-crema-de-spanac.png" alt="Spanac" />
+											<h3>Supa crema de spanac</h3>
+											<p>
+												Ingrediente: spanac, ceapă, morcovi, ţelină, cartofi, gran cucina (smântână).
+											</p>
+											<span class="price">6,99/7,99 lei</span>
+											<span class="weight">350 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+								</ul>
+
+							</div>
+							<!-- End soup container -->
+
+							<!-- Start soup container -->
+							<div class="combination fade tab-pane clearfix" id="fresh">
+								<h2>Freshuri</h2>
+								<ul class="clearfix">
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/fresh/freshuri-2.png" alt="Portocale" />
+											<h3>Fresh de portocale</h3>
+											<span class="price">7,99/9,99 lei</span>
+											<span class="weight">330 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/fresh/freshuri-2.png" alt="Portocale" />
+											<h3>Fresh de grapefruit</h3>
+											<span class="price">7,99/9,99 lei</span>
+											<span class="weight">330 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/fresh/freshuri-2.png" alt="Portocale" />
+											<h3>Fresh de morcov cu mar</h3>
+											<span class="price">7,99/9,99 lei</span>
+											<span class="weight">330 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/fresh/freshuri-2.png" alt="Portocale" />
+											<h3>Fresh de grapefruit cu mar</h3>
+											<span class="price">7,99/9,99 lei</span>
+											<span class="weight">330 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+									<li>
+										<div class="thumbnail clearfix">
+											<img src="img/fresh/limonada2.png" alt="Limonada" />
+											<h3>Limonada cu menta</h3>
+											<span class="price">5,99/6,50 lei</span>
+											<span class="weight">330 ml</span>
+											<a href="#" class="btn btn-default">Comanda</a>
+										</div>
+									</li>
+								</ul>
+
+							</div>
+							<!-- End soup container -->
 						</div>
-						
+
+						<!-- Start Settings -->
+						<div class="setting-wrapper clearfix">
+							<div class="setting-container clearfix">
+								<div class="setting-content">
+									<a href="#" class="setting" data-placement="top" data-toggle="popover" data-trigger="hover" title="Setări"></a>
+									<div class="setting-form">
+										<a href="#" class="closing-accordion"></a>
+
+										<form method="post" action="#" class="clearfix">
+
+											<div class="setting-left">
+												<fieldset>
+													<label for="nume">Nume:</label>
+													<input type="text" name="nume" value="" placeholder="Nume" id="nume" />
+												</fieldset>
+												<fieldset>
+													<label for="prenume">Prenume:</label>
+													<input type="text" name="prenume" value="" placeholder="Prenume" id="prenume" />
+												</fieldset>
+												<fieldset>
+													<label for="setting-email">Adresă de mail:</label>
+													<input type="text" name="setting-email" value="" placeholder="Adresă de mail" id="setting-email" />
+												</fieldset>
+												<fieldset>
+													<label for="setting-pw">Parola:</label>
+													<input type="text" name="setting-pw" value="" placeholder="Parola" id="setting-pw" />
+												</fieldset>
+												<fieldset>
+													<label for="repeat-setting-pw">Repetă parola:</label>
+													<input type="text" name="repeat-setting-pw" value="" placeholder="Repetă parola" id="repeat-setting-pw" />
+												</fieldset>
+											</div>
+
+											<div class="setting-right">
+												<fieldset>
+													<label for="city-select" class="city-set">Selectează orașul:</label>
+													<div class="city-dropdown">
+														<select name="select-city" id="city-select">
+															<option value="1">Cluj-Napoca</option>
+															<option value="2">București</option>
+															<option value="3">Brașov</option>
+															<option value="4">Timișoara</option>
+															<option value="5">Sibiu</option>
+														</select>
+													</div>
+												</fieldset>
+												<fieldset>
+													<label for="setting-address">Adresa:</label>
+													<input type="text" name="setting-address" value="" placeholder="Adresa" id="setting-address" />
+												</fieldset>
+
+											</div>
+
+											<input type="checkbox" name="settings-check" id="settings-check" />
+											<label for="settings-check" class="check-set">Lorem Ipsum is simply dummy text of the printing</label>
+
+											<input type="submit" name="submit-settings" value="Salvează" class="btn btn-default" />
+
+										</form>
+									</div>
+								</div>
+								<div class="address-content">
+									<a href="#" class="address" data-placement="top" data-toggle="popover" data-trigger="hover" title="Adresele mele"></a>
+									<div class="address-accordion">
+										<a href="#" class="closing-accordion"></a>
+										<ul class="my-address">
+											<li>
+												<span class="close-address"></span>
+												<p>
+													<strong>Nume:</strong> John Doe
+												</p>
+												<p>
+													<strong>Adresă de mail:</strong> johndoe@yahoo.ro
+												</p>
+												<p>
+													<strong>Oraș:</strong> Cluj-Napoca
+												</p>
+												<p>
+													<strong>Adresă:</strong> Str. Mehedinti, Nr. 102, Sc. 5, Ap. 80
+												</p>
+											</li>
+											<li>
+												<span class="close-address"></span>
+												<p>
+													<strong>Nume:</strong> John Doe
+												</p>
+												<p>
+													<strong>Adresă de mail:</strong> johndoe@yahoo.ro
+												</p>
+												<p>
+													<strong>Oraș:</strong> Cluj-Napoca
+												</p>
+												<p>
+													<strong>Adresă:</strong> Str. Mehedinti, Nr. 102, Sc. 5, Ap. 80
+												</p>
+											</li>
+											<li>
+												<span class="close-address"></span>
+												<p>
+													<strong>Nume:</strong> John Doe
+												</p>
+												<p>
+													<strong>Adresă de mail:</strong> johndoe@yahoo.ro
+												</p>
+												<p>
+													<strong>Oraș:</strong> Cluj-Napoca
+												</p>
+												<p>
+													<strong>Adresă:</strong> Str. Mehedinti, Nr. 102, Sc. 5, Ap. 80
+												</p>
+											</li>
+											<li>
+												<span class="close-address"></span>
+												<p>
+													<strong>Nume:</strong> John Doe
+												</p>
+												<p>
+													<strong>Adresă de mail:</strong> johndoe@yahoo.ro
+												</p>
+												<p>
+													<strong>Oraș:</strong> Cluj-Napoca
+												</p>
+												<p>
+													<strong>Adresă:</strong> Str. Mehedinti, Nr. 102, Sc. 5, Ap. 80
+												</p>
+											</li>
+											<li>
+												<span class="close-address"></span>
+												<p>
+													<strong>Nume:</strong> John Doe
+												</p>
+												<p>
+													<strong>Adresă de mail:</strong> johndoe@yahoo.ro
+												</p>
+												<p>
+													<strong>Oraș:</strong> Cluj-Napoca
+												</p>
+												<p>
+													<strong>Adresă:</strong> Str. Mehedinti, Nr. 102, Sc. 5, Ap. 80
+												</p>
+											</li>
+										</ul>
+										<a href="#" class="btn btn-default" data-toggle="modal" data-target="#add-address">Adaugă adresă</a>
+									</div>
+								</div>
+								<div class="shopping-content">
+									<a href="#" class="shopping" data-placement="top" data-toggle="popover" data-trigger="hover" title="Salatele mele"></a>
+									<div class="shopping-menu">
+										<a href="#" class="closing-accordion"></a>
+										<ul class="clearfix">
+											<li>
+												<span class="delete-salad"></span>
+												<span class="buy-salad"></span>
+												<div class="thumbnail clearfix">
+													<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
+													<h4>Salata Alaska</h4>
+													<p>
+														Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.
+													</p>
+													<span class="salad-weight">420 g</span>
+													<span class="salad-price">19 lei</span>
+												</div>
+											</li>
+											<li>
+												<span class="delete-salad"></span>
+												<span class="buy-salad"></span>
+												<div class="thumbnail clearfix">
+													<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
+													<h4>Salata Alaska</h4>
+													<p>
+														Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.
+													</p>
+													<span class="salad-weight">420 g</span>
+													<span class="salad-price">19 lei</span>
+												</div>
+											</li>
+											<li>
+												<span class="delete-salad"></span>
+												<span class="buy-salad"></span>
+												<div class="thumbnail clearfix">
+													<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
+													<h4>Salata Alaska</h4>
+													<p>
+														Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.
+													</p>
+													<span class="salad-weight">420 g</span>
+													<span class="salad-price">19 lei</span>
+												</div>
+											</li>
+											<li>
+												<span class="delete-salad"></span>
+												<span class="buy-salad"></span>
+												<div class="thumbnail clearfix">
+													<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
+													<h4>Salata Alaska</h4>
+													<p>
+														Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.
+													</p>
+													<span class="salad-weight">420 g</span>
+													<span class="salad-price">19 lei</span>
+												</div>
+											</li>
+											<li>
+												<span class="delete-salad"></span>
+												<span class="buy-salad"></span>
+												<div class="thumbnail clearfix">
+													<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
+													<h4>Salata Alaska</h4>
+													<p>
+														Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.
+													</p>
+													<span class="salad-weight">420 g</span>
+													<span class="salad-price">19 lei</span>
+												</div>
+											</li>
+											<li>
+												<span class="delete-salad"></span>
+												<span class="buy-salad"></span>
+												<div class="thumbnail clearfix">
+													<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
+													<h4>Salata Alaska</h4>
+													<p>
+														Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.
+													</p>
+													<span class="salad-weight">420 g</span>
+													<span class="salad-price">19 lei</span>
+												</div>
+											</li>
+											<li>
+												<span class="delete-salad"></span>
+												<span class="buy-salad"></span>
+												<div class="thumbnail clearfix">
+													<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
+													<h4>Salata Alaska</h4>
+													<p>
+														Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.
+													</p>
+													<span class="salad-weight">420 g</span>
+													<span class="salad-price">19 lei</span>
+												</div>
+											</li>
+											<li>
+												<span class="delete-salad"></span>
+												<span class="buy-salad"></span>
+												<div class="thumbnail clearfix">
+													<img src="img/salads/alaska1-150x150.png" class="img-responsive" />
+													<h4>Salata Alaska</h4>
+													<p>
+														Ingrediente: salată verde, somon fume, ciuperci crude/ciuperci fierte, roşii, ceapă roşie, morcovi, castravete verde.
+													</p>
+													<span class="salad-weight">420 g</span>
+													<span class="salad-price">19 lei</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!-- End Settings -->
+
 					</div>
-					<!-- End Settings -->
-					
+					<!-- End menu-wrapper -->
 				</div>
-				<!-- End menu-wrapper -->
+
 			</div>
-			
 		</div>
-	</div>
-  	
-  	
-  	<!-- Modal -->
-	<div class="modal fade" id="add-address" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Adaugă adresă</h4>
-	      </div>
-	      <div class="modal-body">
-	        <form action="#" method="post" class="setting-form">
-				<fieldset>
-					<label for="address-name">Nume:</label>
-					<input type="text" name="nume" value="" placeholder="Nume" id="address-name" />
-				</fieldset>
-				<fieldset>
-					<label for="address-lastname">Prenume:</label>
-					<input type="text" name="prenume" value="" placeholder="Prenume" id="address-lastname" />
-				</fieldset>
-				<fieldset>
-					<label for="address-setting-email">Adresă de mail:</label>
-					<input type="text" name="setting-email" value="" placeholder="Adresă de mail" id="address-setting-email" />
-				</fieldset>
-				<fieldset>
-					<label for="address-setting-pw">Parola:</label>
-					<input type="text" name="setting-pw" value="" placeholder="Parola" id="address-setting-pw" />
-				</fieldset>
-				<fieldset>
-					<label for="address-repeat-pw">Repetă parola:</label>
-					<input type="text" name="repeat-setting-pw" value="" placeholder="Repetă parola" id="address-repeat-pw" />
-				</fieldset>
 
-				<fieldset>				
-					<label for="address-city-select" class="city-set">Selectează orașul:</label>							
-					<div class="city-dropdown">													
-						<select name="select-city" id="address-city-select">
-							<option value="1">Cluj-Napoca</option>
-							<option value="2">București</option>
-							<option value="3">Brașov</option>
-							<option value="4">Timișoara</option>
-							<option value="5">Sibiu</option>
-						</select>
+		<!-- Modal -->
+		<div class="modal fade" id="add-address" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Adaugă adresă</h4>
 					</div>
-				</fieldset>
-				<fieldset>
-					<label for="address-setting-address">Adresa:</label>
-					<input type="text" name="setting-address" value="" placeholder="Adresa" id="address-setting-address" />
-				</fieldset>
-				
-				<input type="checkbox" name="settings-check" id="address-settings-check" />
-				<label for="address-settings-check" class="check-set">Lorem Ipsum is simply dummy text of the printing</label>	
+					<div class="modal-body">
+						<form action="#" method="post" class="setting-form">
+							<fieldset>
+								<label for="address-name">Nume:</label>
+								<input type="text" name="nume" value="" placeholder="Nume" id="address-name" />
+							</fieldset>
+							<fieldset>
+								<label for="address-lastname">Prenume:</label>
+								<input type="text" name="prenume" value="" placeholder="Prenume" id="address-lastname" />
+							</fieldset>
+							<fieldset>
+								<label for="address-setting-email">Adresă de mail:</label>
+								<input type="text" name="setting-email" value="" placeholder="Adresă de mail" id="address-setting-email" />
+							</fieldset>
+							<fieldset>
+								<label for="address-setting-pw">Parola:</label>
+								<input type="text" name="setting-pw" value="" placeholder="Parola" id="address-setting-pw" />
+							</fieldset>
+							<fieldset>
+								<label for="address-repeat-pw">Repetă parola:</label>
+								<input type="text" name="repeat-setting-pw" value="" placeholder="Repetă parola" id="address-repeat-pw" />
+							</fieldset>
 
-	        </form>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Închide</button>
-	        <button type="button" class="btn btn-default">Salvează</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-  	
-  		
-  	<!-- Google CDN's jquery -->
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  	
-  	<!-- Bootstrap jquery -->
-  	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-  	
-  	<!-- jQuery UI -->
-  	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-  	
-  	<!-- ddSlick jquery plugin -->
-  	<script type="text/javascript" src="js/ddslick.dropdown.js"></script>
-  	
-  	<!-- Custom jquery -->
-  	<script type="text/javascript" src="js/script.js"></script>
-  	
-  </body>
+							<fieldset>
+								<label for="address-city-select" class="city-set">Selectează orașul:</label>
+								<div class="city-dropdown">
+									<select name="select-city" id="address-city-select">
+										<option value="1">Cluj-Napoca</option>
+										<option value="2">București</option>
+										<option value="3">Brașov</option>
+										<option value="4">Timișoara</option>
+										<option value="5">Sibiu</option>
+									</select>
+								</div>
+							</fieldset>
+							<fieldset>
+								<label for="address-setting-address">Adresa:</label>
+								<input type="text" name="setting-address" value="" placeholder="Adresa" id="address-setting-address" />
+							</fieldset>
+
+							<input type="checkbox" name="settings-check" id="address-settings-check" />
+							<label for="address-settings-check" class="check-set">Lorem Ipsum is simply dummy text of the printing</label>
+
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							Închide
+						</button>
+						<button type="button" class="btn btn-default">
+							Salvează
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Google CDN's jquery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+		<!-- Bootstrap jquery -->
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+		<!-- jQuery UI -->
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+		<!-- ddSlick jquery plugin -->
+		<script type="text/javascript" src="js/ddslick.dropdown.js"></script>
+
+		<!-- Custom jquery -->
+		<script type="text/javascript" src="js/script.js"></script>
+
+	</body>
 </html>

@@ -106,23 +106,9 @@
   width: 100%;
   margin: 150px 28px 0px 26px;
   min-height: 500px;
+  border: 1px solid grey;
+  border-radius: 30px;
 }
-
-  .empty-box {
-    li {
-      &:first-child {
-        float: left;
-      }
-    }
-  }
-  
-  .empty-box {
-    li {
-      width: 60px;
-      margin: 5px;
-      float: right;
-    }
-  }
 
 .nav-tabs {
   .dropdown-menu {
@@ -589,10 +575,33 @@
 /*-- End setting-form, my-address, shopping-menu --*/
 
 /*-- Start Drag and Drop styles --*/
-.selected-salad {
+.extras {
+  float:right;
+}
+.selected-ingredients, .selected-crutons, .selected-dressing {
+  width:100%;
+  clear:both;
   li {
+      width: 60px;
+      margin: 5px;
+      float: right;
+  }
     img {
       width: 100%;
+      border-radius:20px;
+    }
+}
+
+.selected-salad {
+  li {
+       float: left;
+    img {
+      width: 100%;
+      border-radius:20px;
+    }
+    &:first-child{
+        width : 300px;
+        height : auto;
     }
   }
 }
